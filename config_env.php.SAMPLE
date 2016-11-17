@@ -1,0 +1,85 @@
+<?php
+/*
+ * This document includes global environment-specific settings
+ *
+ */
+ 
+ 
+/*
+ *---------------------------------------------------------------
+ * GLOBAL SETTINGS
+ *---------------------------------------------------------------
+ */
+	define('ENVIRONMENT', 'testing');
+	
+	define('SECURE_MODE', FALSE);
+	
+	define('BASE_URL', 'http://sta-sc-iam1.clout.com/main.php');#Set to HTTPS:// if SECURE_MODE = TRUE
+
+	define('BACKEND_SERVER_URL', 'http://sta-be-prc1.clout.com/main/index');
+	
+	define('CRON_SERVER_URL', 'http://sta-dw-crn1.clout.com/main/index');
+	
+	define('MESSAGE_SERVER_URL', 'http://sta-ms-msg1.clout.com/main/index');
+
+/*
+ *---------------------------------------------------------------
+ * QUERY CACHE SETTINGS
+ *---------------------------------------------------------------
+ */
+ 	
+	define('ENABLE_QUERY_CACHE', FALSE); 
+
+
+
+/*
+ *
+ *	0 = Disables logging, Error logging TURNED OFF
+ *	1 = Error Messages (including PHP errors)
+ *	2 = Debug Messages
+ *	3 = Informational Messages
+ *	4 = All Messages
+ *	The log file can be found in: [HOME_URL]application/logs/
+ *	Run >tail -n50 log-YYYY-MM-DD.php to view the errors being generated
+ */
+	define('LOG_ERROR_LEVEL', 0);
+	
+	
+/*
+ *---------------------------------------------------------------
+ * DATABASE SETTINGS
+ *---------------------------------------------------------------
+ */
+
+	define('HOSTNAME', "192.168.88.243");	        
+	
+	define('USERNAME', "extlocaluser");
+	
+	define('PASSWORD', "3xtCl0ut");
+	
+	define('DATABASE', "clout_v1_3iam");
+	
+	define('DBDRIVER', "mysqli");
+	
+	define('DBPORT', "3306");
+
+	define('MEMCACHED_PERIOD', 10); # number of seconds data is cached before expiry
+
+	
+
+/*
+ *---------------------------------------------------------------
+ * EMAIL SETTINGS
+ *---------------------------------------------------------------
+ */
+	define('SMTP_HOST', "localhost");
+	
+	define('SMTP_PORT', "25");
+	
+	define('SMTP_USER', "root"); 
+	
+	define('SMTP_PASS', "");
+	
+	define('FLAG_TO_REDIRECT', "0");// 1 => Redirect emails to a specific mail id, 
+									// 0 => No need to redirect emails.
+?>
